@@ -1,6 +1,6 @@
 #include <unistd.h>
 
-void ft_writestr(char *string)
+void ft_writestr2(char *string)
 {
   int i;
 
@@ -13,6 +13,13 @@ void ft_writestr(char *string)
 }
 
 int main(int argc, char *argv[]) {
-  ft_writestr(argv[0]);
+  int i;
+
+  i = 0;
+  while (i++, argv[i] != '\0')
+  {
+    ft_writestr2(argv[i]);
+  }
+
 	return 0;
 }

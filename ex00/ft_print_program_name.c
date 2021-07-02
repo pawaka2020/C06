@@ -1,21 +1,18 @@
-// #include <unistd.h>
+#include <unistd.h>
 
-// void	ft_putchar(char c)
-// {
-// 	write(1, &c, 1);
-// }
+void ft_writestr(char *string)
+{
+  int i;
 
-// int		main(int argc, char **argv)
-// {
-// 	int	i;
+  i = -1;
+  while (i++, string[i] != '\0')
+  {
+    write(1, &string[i], 1);
+  }
+  write(1, &"\n", 1);
+}
 
-// 	i = 0;
-// 	argc = 0;
-// 	while (argv[0][i])
-// 	{
-// 		ft_putchar(argv[0][i]);
-// 		i++;
-// 	}
-// 	ft_putchar('\n');
-// 	return (0);
-// }
+int main(int argc, char *argv[]) {
+  ft_writestr(argv[0]);
+	return 0;
+}
